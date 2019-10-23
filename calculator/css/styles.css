@@ -1,0 +1,28 @@
+* {
+  box-sizing: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(to right, rgb(211, 208, 208), #025195);
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+}
+
+input[type="button"] {
+  cursor: pointer;
+  font-size: 2rem;
+  background: rgba(233, 231, 231, 0.75);
+}
+
+input[type="button"]:hover {
+  background: rgba(233, 231, 231, 0.9);
+}

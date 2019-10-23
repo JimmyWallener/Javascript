@@ -7,6 +7,31 @@
     <link rel="stylesheet" href="css/styles.css" />
     <script src="js/script.js" defer></script>
     <title>Miniräknare</title>
+    <div class="container">
+        <div class="output">
+      <div class="outputScreen"></div>
+      <div class="inputScreen"></div>
+        </div>
+    <input type="button" class="span-two" value="CE" onclick="clearAll()">
+    <input type="button" value="DEL" onclick="backSpace()">
+    <input type="button" value="&#247" onclick="getOp('/')">
+    <input type="button" value="7" onclick="getNum(7)">
+    <input type="button" value="8" onclick="getNum(8)">
+    <input type="button" value="9" onclick="getNum(9)">
+    <input type="button" value="x" onclick="getOp('*')">
+    <input type="button" value="4" onclick="getNum(4)">
+    <input type="button" value="5" onclick="getNum(5)">
+    <input type="button" value="6" onclick="getNum(6)">
+    <input type="button" value="-" onclick="getOp('-')">
+    <input type="button" value="1" onclick="getNum(1)">
+    <input type="button" value="2" onclick="getNum(2)">
+    <input type="button" value="3" onclick="getNum(3)">
+    <input type="button" value="+" onclick="getOp('+')">
+    <input type="button" value="+/-" onclick="getOp('+/-')">
+    <input type="button" value="0" onclick="getNum(0)">
+    <input type="button" value="." onclick="getNum('.')">
+    <input type="button" value="=" onclick="getMath()">
+    </div>
   </head>
   <body></body>
 </html>
