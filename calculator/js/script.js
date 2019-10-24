@@ -23,21 +23,21 @@ const outputToScreen = document.getElementById("outputScreen").innerHTML
 const inputToScreen = document.getElementById("inputScreen").innerHTML
   .numberSelector;
 
-function getNumbers(num) {};
+function getNumbers(numberSelector) {};
 
 
 
-function getOperator(oper) {};
+function getOperator(operatorSelector) {};
 
 
 function calculate();
 
 
 
-function outPut();
+function outPut(outputToScreen);
 
 
-function inPut();
+function inPut(inputToScreen);
 
 
 function display();
