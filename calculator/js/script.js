@@ -14,6 +14,30 @@
  * DOM or call function onclick?
  * ? : Use class to create callbacks to functions?
  */
-const getNumber = document.getElementById("numbers").value;
 
-console.log(getNumber);
+const numberSelector = document.querySelectorAll("number");
+const operatorSelector = document.querySelectorAll("operator");
+const backspaceSelection = document.getElementById("delete");
+const outputToScreen = document.getElementById("outputScreen").innerHTML
+  .numberSelector;
+const inputToScreen = document.getElementById("inputScreen").innerHTML
+  .numberSelector;
+
+function getNumbers(numberSelector) {};
+
+
+
+function getOperator(operatorSelector) {};
+
+
+function calculate();
+
+
+
+function outPut(outputToScreen);
+
+
+function inPut(inputToScreen);
+
+
+function display();
