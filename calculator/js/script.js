@@ -14,3 +14,6 @@
  * DOM or call function onclick?
  * ? : Use class to create callbacks to functions?
  */
+const getNumber = document.getElementById("numbers").value;
+
+console.log(getNumber);
