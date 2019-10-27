@@ -15,29 +15,20 @@
  * ? : Use class to create callbacks to functions?
  */
 
-const numberSelector = document.querySelectorAll("number");
-const operatorSelector = document.querySelectorAll("operator");
+const numberSelector = document.getElementById("number");
+const operatorSelector = document.getElementById("operator");
 const backspaceSelection = document.getElementById("delete");
-const outputToScreen = document.getElementById("outputScreen").innerHTML
-  .numberSelector;
-const inputToScreen = document.getElementById("inputScreen").innerHTML
-  .numberSelector;
+const outputToScreen = document.getElementById("outputScreen");
+const inputToScreen = document.getElementById("inputScreen");
 
-function getNumbers(numberSelector) {};
+function getNumbers() {}
 
+function getOperator() {}
 
+function calculate() {}
 
-function getOperator(operatorSelector) {};
+function outPut() {}
 
+function inPut() {}
 
-function calculate();
-
-
-
-function outPut(outputToScreen);
-
-
-function inPut(inputToScreen);
-
-
-function display();
+function display() {}
