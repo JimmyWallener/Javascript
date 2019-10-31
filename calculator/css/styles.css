@@ -15,7 +15,7 @@ body{
 }
 #firstNumber, #secondNumber {
   width: 60px;
-  text-align: right;
+  text-align: center;
   cursor: pointer;
 }
 
