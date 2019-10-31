@@ -7,18 +7,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <script src="/calculator/js/script.js" defer></script>
   <link rel="stylesheet" href="/calculator/css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans&display=swap" rel="stylesheet">
   <title>Miniräknare</title>
 </head>
 
 <body>
-  <h1>Miniräknare</h1>
   <div class="calculator">
-    <p id="result"></p>
+    <h1>Miniräknare</h1>
+    <p id="result">0</p>
     <div class="numpad">
-      <input type="text" id="firstNumber" value="" />
-      <input type="text" id="operator" value="" />
-      <input type="text" id="secondNumber" value="" />
+      <input type="text" id="firstNumber" value="" required />
+      <input type="text" id="operator" value="" required />
+      <input type="text" id="secondNumber" value="" required />
       <input type="button" id="calc" value="Räkna ut" onclick="calculator()" />
+      <input type="button" id="clear" value="Rensa" onclick="refreshPage()" />
     </div>
   </div>
 </body>

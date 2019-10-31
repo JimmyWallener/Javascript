@@ -1,22 +1,38 @@
+*, *::before, *::after {
+  font-family: 'Merriweather', serif;
+  
+}
+
 body{
   background-color: rgb(96, 123, 211);
+  box-sizing: border-box;
 }
 
 #operator {
-  width: 30px;
+  width: 15px;
   text-align: center;
+  cursor: pointer;
 }
-#firstNumber {
+#firstNumber, #secondNumber {
   width: 60px;
+  text-align: right;
+  cursor: pointer;
 }
-#secondNumber {
-  width: 60px;
-}
+
 p {
+  background-color: black;
+  border-radius: 15px;
+  text-align: right;
+  width: 280px;
   font-size: 130%;
   color: whitesmoke;
-
+  padding: 10px;
+  
 }
-.numpad{
+.numpad {
  margin-top: 5vh;
- }
+}
+.calculator {
+  display: block;
+  margin: 0 auto;
+}
