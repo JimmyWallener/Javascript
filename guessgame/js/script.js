@@ -11,10 +11,9 @@ const quizData = [
   ["Who invented the electric light bulb?", "Thomas Edison"]
 ];
 
-const question = document.getElementById("question");
-const submit = document.getElementById("Submit");
+const question = document.getElementById('question');
+const submit = document.getElementById('Submit').value.toLowerCase;
 
-let tries = 3;
 let score = 0;
 let setQuestions = quizData.length;
 
@@ -23,17 +22,9 @@ for (let i = 0; i < setQuestions; i++) {
   question.innerHTML = quizData[i][0];
   for (let j = 0; j < setQuestions[i]; j++) {
     console.log(quizData[i][j]);
-    let answer = quizData[i][j];
+    let answer = quizData[i][j].toLowerCase;
     if (submit === answer) {
       score++;
-    } else {
-      while (tries > 0) {
-        alert("Try again!" + "" + tries + " Left");
-        tries--;
-        if (tries === 3) {
-          alert("No more guesses!");
-        }
-      }
     }
   }
-}
+};

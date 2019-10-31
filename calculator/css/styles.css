@@ -1,56 +1,22 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  font-weight: normal;
+body{
+  background-color: rgb(96, 123, 211);
 }
 
-body {
-  padding: 0;
-  margin: 0;
-  background: linear-gradient(to right, #8888d1, #025195);
+#operator {
+  width: 30px;
+  text-align: center;
 }
+#firstNumber {
+  width: 60px;
+}
+#secondNumber {
+  width: 60px;
+}
+p {
+  font-size: 130%;
+  color: whitesmoke;
 
-.container {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  min-height: 100vh;
-  grid-template-columns: repeat(4, 80px);
-  grid-template-rows: minmax(120px, auto) repeat(5, 80px);
 }
-
-.container > button {
-  cursor: pointer;
-  font-size: 2rem;
-  background: rgba(255, 255, 255, 0.7);
-}
-
-.container > button:hover {
-  background: rgba(255, 255, 255, 0.9);
-}
-
-.span-two {
-  grid-column: span 2;
-}
-
-.output {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  flex-direction: column;
-  padding: 12px;
-  word-wrap: break-word;
-  word-break: break-all;
-  grid-column: 1 / -1;
-  background-color: rgba(0, 0, 0, 0.75);
-}
-.output .outputScreen {
-  font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.75);
-}
-.output .inputScreen {
-  font-size: 2.5rem;
-  color: white;
-}
+.numpad{
+ margin-top: 5vh;
+ }
