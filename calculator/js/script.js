@@ -26,10 +26,10 @@ function calculator() {
   // Returnerar totalvärdet av resultatet till hemsidan
   document.getElementById('result').innerHTML = `${firstNumber} ${operator} ${secondNumber} = ${sum}`
 }
-// Gör en enkel refreshare för att kunna skriva in igen. 
-// då sidan är liten, laddas den snabbt. 
-// Dock fungerar inte refresharen i codepen, men i live version på webserver
-// Annars kan man göra en document. anrop och sätta värdet till ''
+/* Gör en enkel refreshare för att kunna skriva in igen. 
+då sidan är liten, laddas den snabbt. 
+Dock fungerar inte refresharen i codepen, men i live version på webserver
+Annars kan man göra en document. anrop och sätta värdet till '' */
 function refreshPage() {
   window.location.reload();
 } 
