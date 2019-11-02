@@ -11,9 +11,10 @@ const quizData = [
   ["Who invented the electric light bulb?", "Thomas Edison"]
 ];
 
-const question = document.getElementById("question");
-const submit = document.getElementById("Submit");
+const question = document.getElementById('question');
+const submit = document.getElementById('Submit').value.toLowerCase;
 
+<<<<<<< HEAD
 let setQuestions = quizData.length;
 
 function quiz() {
@@ -34,6 +35,19 @@ function quiz() {
         }
       }
     }*/
+=======
+let score = 0;
+let setQuestions = quizData.length;
+
+for (let i = 0; i < setQuestions; i++) {
+  console.log(quizData[i]);
+  question.innerHTML = quizData[i][0];
+  for (let j = 0; j < setQuestions[i]; j++) {
+    console.log(quizData[i][j]);
+    let answer = quizData[i][j].toLowerCase;
+    if (submit === answer) {
+      score++;
+>>>>>>> 3c183518a9a90782058ad6b3d1915c47740a6d71
     }
   }
-}
+};
