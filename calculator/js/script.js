@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 function calculator() {
   // Hämtar värdena från ID och konverterar till float
   let firstNumber = parseFloat(document.getElementById('firstNumber').value);
@@ -35,4 +33,3 @@ Annars kan man göra en document. anrop och sätta värdet till '' */
 function refreshPage() {
   window.location.reload();
 } 
->>>>>>> 3c183518a9a90782058ad6b3d1915c47740a6d71
