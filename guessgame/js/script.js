@@ -14,16 +14,15 @@ const quizData = [
 const question = document.getElementById("question");
 const submit = document.getElementById("Submit");
 
-let tries = 3;
-let score = 0;
 let setQuestions = quizData.length;
 
-for (let i = 0; i < setQuestions; i++) {
-  console.log(quizData[i]);
-  question.innerHTML = quizData[i][0];
-  for (let j = 0; j < setQuestions[i]; j++) {
-    console.log(quizData[i][j]);
-    let answer = quizData[i][j];
+function quiz() {
+  for (let i = 0; i < setQuestions; i++) {
+    console.log(quizData[i]);
+    question.innerHTML = quizData[i][0];
+    for (let j = 0; j < setQuestions[i]; j++) {
+      console.log(quizData[i][j]);
+      /*let answer = quizData[i][j];
     if (submit === answer) {
       score++;
     } else {
@@ -34,6 +33,7 @@ for (let i = 0; i < setQuestions; i++) {
           alert("No more guesses!");
         }
       }
+    }*/
     }
   }
 }
