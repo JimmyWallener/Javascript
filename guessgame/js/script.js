@@ -90,19 +90,80 @@ const quizData = [
     correct: 1
   },
   {
-    title: "Vilken grupp här nedanför innehåller endast kräldjur?",
+    title: "Hur många tänder har en vuxen människa om man inte räknar med visdomständerna?",
     answer: [
-      "Ödla, sköldpadda, orm",
-      "Ödla, krokodil, grävling",
-      "Bläckfisk, snigel, sköldpadda",
-      "Krabba, daggmask, orm"
+      "28",
+      "23",
+      "32"
     ],
     correct: 0
   }
 ]
 
 
-let score = 0;
-let currentQuestion = 0;
+let totals = 0;
+let activeQuestion = 0;
+let randomQuestion = Math.floor(Math.random() * quizData.length); // Creates a randomiser based on the lenght of the array.
+
+$(document).ready(function () {
+  $('.start a').click(function (event) {
+    event.preventDefault(); // Stops the href from loading a page
+    $('.start').hide(); // Hides start button after click
+    $('.quiz').show(); // shows quiz div with content
+    displayQuestion(); // runs function for displaying questions
+  });
+
+  $('.quiz ul').on('click', 'li', function () { // On click on list, add .selected to ul for css padding
+    $('.selected').removeClass('selected'); // If selected is active, remove it
+    $(this).addClass('selected'); // just add class selected (css style)
+    $('.quiz p').html(''); // Once something is selected, remove nothing selected prompt
+  });
+  $('.quiz a').click(function (event) {
+    event.preventDefault();
+    if ($('li.selected').length) {
+      let guess = parseInt($('li.selected').attr("id")); // create a var that holds the id from the selected answer and convert it to Int.
+      isAnswerCorrect(guess);
+    } else {
+      $('.quiz p').text("You need to select an answer"); // If nothing has been selected, prompt user
+    }
+  })
+});
+
+
+function displayQuestion() {
+  let question = quizData[activeQuestion]; // Randomiser on the questions
+  $('.quiz h2').text(question.title); // Adds title from array to h2
+  $('.quiz ul').html(''); // clears ul from dummylists
+  for (var i = 0; i < question.answer.length; i++) {
+    $('.quiz ul').append("<li id='" + i + "'>" + question.answer[i] + "</li>"); // Appends a list with questions and adds index to each
+
+  }
+}
+
+function isAnswerCorrect(guess) {
+  let question = quizData[activeQuestion];
+  let numberOfQuestions = quizData;
+  if (question.correct === guess) {
+    totals++;
+  }
+  activeQuestion++;
+  if (activeQuestion >= numberOfQuestions.length) {
+    showTotals();
+  } else {
+    displayQuestion();
+  }
+  console.log(activeQuestion);
+  console.log(question.correct)
+  console.log(numberOfQuestions.length);
+  console.log(question);
+}
+
+function showTotals() {
+  let question = quizData;
+  $('.quiz').hide();
+  $('.summary').show();
+  $('.summary p').text("Congrats you scored " + totals + " out of " + question.length + " correct!");
+
+}
 
 

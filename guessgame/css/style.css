@@ -4,3 +4,10 @@
 .selected {
   background-color: yellow;
 }
+.quiz li {
+  cursor: pointer;
+}
+.quiz ul {
+  list-style: none;
+  padding: 0;
+}
