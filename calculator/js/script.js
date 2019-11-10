@@ -7,6 +7,10 @@ function calculator() {
   // Definierar variabel sum till 0
   var sum = 0;
   // Skapar en switch för beräkningen
+  /* Lägger in if-statement som stoppar användaren från att skriva in annat än nummer och även dividering med 0 */
+  if (isNaN(firstNumber) || (isNaN(secondNumber)) || operator === "/" && secondNumber === 0) {
+    return;
+  }
   switch (operator) {
     case '+':
       sum = firstNumber + secondNumber;
