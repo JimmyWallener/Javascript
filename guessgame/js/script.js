@@ -162,8 +162,7 @@ function showTotals() {
   let question = quizData;
   $('.quiz').hide();
   $('.summary').show();
-  $('.summary p').text("Congrats you scored " + totals + " out of " + question.length + " correct!");
-
+  $('.summary p').text("Congratulations! You have scored " + totals + " out of " + question.length + " correct!");
 }
 
 
